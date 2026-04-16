@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+    overflow-x: hidden;
+}
+
+.logo {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff;
+}
+
+header {
+    padding: 30px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 12px;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00f7ff;
+}
+
+section {
+    padding: 25px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.box {
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+.card {
+    background: rgba(255,255,255,0.15);
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 12px;
+    width: 90%;
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8rem;
+}
+
+.fade {
+    animation: fadeIn 1.5s ease-in;
+}
+
+.slide {
+    animation: slideDown 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideDown {
+    from {transform: translateY(-50px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card {
+        width: 300px;
+    }
+}
